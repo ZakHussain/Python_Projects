@@ -1,0 +1,18 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>Results</title>
+	</head>
+	<body>
+		<h1>Submitted info</h1>
+		<h1> {{session['city']}}</h1>
+		<h1> {{session['language']}}</h1>
+		{% with messages = get_flashed_messages() %}
+			{% if messages %}
+				{% for message in messages %}
+					<p>{{message}}</p>
+				{% endfor %}
+			{% endif %}
+		{% endwith%}	
+	</body>
+</html>
